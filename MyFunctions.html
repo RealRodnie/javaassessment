@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+       
+    </style>
+
+    <head>
+
+
+
+    </head>
+    
+    <body>
+
+
+        <script>
+            function mainProgram() {
+
+                let fullName = prompt("Please Enter your Full name:");
+                let menu = parseInt(prompt("Main Menu (Select a number 1-3)\n1. Username Generator\n2. Factorial calculation\n3. Exit/Goodbye"))
+
+                switch(menu) {
+                case 1:
+                    alert(fullName + " you have selected option 1.");
+                    stringFunction(fullName);
+                    break;
+                case 2:
+                    alert(fullName + " you have selected option 2.");
+                    numberFunction();
+                    break;
+                case 3:
+                    alert("Goodbye " + fullName + "!");
+                    break;
+                default:
+                    alert("this is not a valid entry.\n please enter a number 1-3.");
+                    mainProgram();
+                
+            }
+
+            while (menu != 3) {
+                return;
+            }
+                
+            }
+
+            function stringFunction(fullName) {
+
+                createName(fullName);
+                
+            }
+
+            function createName(user) {
+                
+                const names = user.split(" ");
+                let string1 = names[0];
+                let string2 = names[1];
+                let fLetter = names[0].charAt(0);
+
+                let userName = fLetter + string2;
+
+                alert("Welcome " + userName + "!")
+                mainProgram();
+            }
+
+            function numberFunction() {
+
+                do {
+                    facNum = parseInt(prompt("Please enter the number you want factorialised"));
+                    if (facNum < 1) {
+                        alert("Enter a positive whole number greater than 0");
+                    }
+                }
+
+                while (facNum<1)
+                
+
+                let count = facNum;
+                for (count = (facNum - 1); count > 0 ; count--) {
+                    if (count != 1) {
+                        alert(facNum + " * " + count);
+                        facNum = facNum * count;
+                    }
+                    else {
+                        alert(facNum + " * " + count + " = ");
+                        facNum = facNum * count;
+                    }
+                }
+                alert("your calculated factorial is: " + facNum);
+                mainProgram();
+
+            }
+
+
+
+
+             
+
+
+            mainProgram();
+        </script>
+
+
+        
+
+
+
+
+    </body>
+
+
+</html>
